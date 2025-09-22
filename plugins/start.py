@@ -110,11 +110,15 @@ async def start_command(client: Bot, message: Message):
                 reply_markup=button,
                 parse_mode=ParseMode.HTML
             )
+            note_msg = await message.reply_text(
+                "<u><b>Note: If the link is expired, please click the post link again to get a new one.</b></u>",
+                parse_mode=ParseMode.HTML
+            )
 
-            # Auto-delete the note message after 2 minutes
-            asyncio.create_task(delete_after_delay(note_msg, 120))
+            # Auto-delete the note message after 5 minutes
+            asyncio.create_task(delete_after_delay(note_msg, 300))
 
-            asyncio.create_task(revoke_invite_after_2_minutes(client, channel_id, invite.invite_link, is_request))
+            asyncio.create_task(revoke_invite_after_5_minutes(client, channel_id, invite.invite_link, is_request))
 
         except Exception as e:
             await message.reply_text(
