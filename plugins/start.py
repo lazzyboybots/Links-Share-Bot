@@ -149,7 +149,11 @@ async def start_command(client: Bot, message: Message):
                 START_MSG,
                 reply_markup=inline_buttons,
                 parse_mode=ParseMode.HTML
-            )
+            ),
+            reply_markup=reply_markup,
+            message_effect_id=5104841245755180586)  # 🔥
+        
+        return
 
 
 #=====================================================================================##
