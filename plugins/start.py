@@ -111,10 +111,10 @@ async def start_command(client: Bot, message: Message):
                 parse_mode=ParseMode.HTML
             )
 
-            # Auto-delete the note message after 5 minutes
-            asyncio.create_task(delete_after_delay(note_msg, 300))
+            # Auto-delete the note message after 2 minutes
+            asyncio.create_task(delete_after_delay(note_msg, 120))
 
-            asyncio.create_task(revoke_invite_after_5_minutes(client, channel_id, invite.invite_link, is_request))
+            asyncio.create_task(revoke_invite_after_2_minutes(client, channel_id, invite.invite_link, is_request))
 
         except Exception as e:
             await message.reply_text(
