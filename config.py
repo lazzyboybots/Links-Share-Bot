@@ -15,7 +15,7 @@ PORT = os.environ.get("PORT", "8080")
 
 # Database
 DB_URI = os.environ.get("DB_URI", "mongodb+srv://nshubh345:1FmseyW0TKaWNMNo@cluster0.pgewb.mongodb.net/?retryWrites=true&w=majority") 
-DATABASE_NAME=filestorexbot")
+DATABASE_NAME = os.environ.get("filestorexbot")
 DB_NAME = os.environ.get("DB_NAME", "link")
 
 #Auto approve 
