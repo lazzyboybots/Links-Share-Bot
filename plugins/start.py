@@ -72,7 +72,7 @@ async def start_command(client: Bot, message: Message):
                     [[InlineKeyboardButton("• Proceed to Link •", url=original_link)]]
                 )
                 return await message.reply_text(
-                    "<b><blockquote expandable>ʜᴇʀᴇ ɪs ʏᴏᴜʀ ʟɪɴᴋ! ᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ᴛᴏ ᴘʀᴏᴄᴇᴇᴅ</b>",
+                    "<b><blockquote expandable>𝗖𝗹𝗶𝗰𝗸 𝘁𝗵𝗲 𝗯𝘂𝘁𝘁𝗼𝗻 𝗯𝗲𝗹𝗼𝘄 ⬇️</b>",
                     reply_markup=button,
                     parse_mode=ParseMode.HTML
                 )
@@ -93,7 +93,7 @@ async def start_command(client: Bot, message: Message):
 
             await save_invite_link(channel_id, invite.invite_link, is_request)
 
-            button_text = "• ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ •" if is_request else "• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •"
+            button_text = "•🌟 Jᴏɪɴ Cʜᴀɴɴᴇʟ Nᴏᴡ 🌟" if is_request else "🌟 Jᴏɪɴ Cʜᴀɴɴᴇʟ Nᴏᴡ 🌟"
             button = InlineKeyboardMarkup([[InlineKeyboardButton(button_text, url=invite.invite_link)]])
 
             wait_msg = await message.reply_text(
